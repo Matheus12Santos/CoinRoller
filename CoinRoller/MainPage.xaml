@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            HorizontalOptions="Center">
+
+            <Label
+                Text="Escolha o seu lado:"
+                FontSize="Header"/>
+            
+            <Image
+                x:Name="CoinCaraImg"
+                Source="coin_cara_image.jpg"
+                SemanticProperties.Description="Cara"
+                HeightRequest="200"
+                IsVisible="False"/>
+
+            <Image
+                x:Name="CoinCoroaImg"
+                Source="coin_coroa_image.jpg"
+                SemanticProperties.Description="Coroa"
+                HeightRequest="200"
+                IsVisible="False"/>
+
+            <Button
+                x:Name="CaraButton"
+                Text="Cara"
+                Background="#404040"
+                Clicked="CaraButton_Clicked"/>
+
+            <Button
+                x:Name="CoroaButton"
+                Text="Coroa"
+                Background="#404040"
+                Clicked="CoroaButton_Clicked"/>
+
+            <Label Text="Pontuação: "/>
+                
+            <Label
+                x:Name="ScoreLabel"
+                Text=" "/>
+
+            <Label Text="Pontuação Maxima: "/>
+            
+            <Label
+                x:Name="MaxScoreLabel"
+                Text=" "/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
