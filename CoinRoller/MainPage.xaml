@@ -12,7 +12,7 @@
             <Label
                 Text="Escolha o seu lado:"
                 FontSize="Header"/>
-            
+
             <Image
                 x:Name="CoinCaraImg"
                 Source="coin_cara_image.jpg"
@@ -20,12 +20,20 @@
                 HeightRequest="200"
                 IsVisible="False"/>
 
+            <Label 
+                x:Name="TextCaraLabel"
+                Text=" "/>
+
             <Image
                 x:Name="CoinCoroaImg"
                 Source="coin_coroa_image.jpg"
                 SemanticProperties.Description="Coroa"
                 HeightRequest="200"
                 IsVisible="False"/>
+
+            <Label 
+                x:Name="TextCoroaLabel"
+                Text=" "/>
 
             <Button
                 x:Name="CaraButton"

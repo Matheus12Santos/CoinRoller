@@ -3,7 +3,7 @@
     public partial class MainPage : ContentPage
     {
         int points = 0;      
-        //int maxscore = 0;
+        int maxscore = 0;
 
         public MainPage()
         {
@@ -12,23 +12,26 @@
 
         private void CaraButton_Clicked(object sender, EventArgs e)
         {
-            //Escolhe CaraButton           
+            //Escolher CaraButton           
             int spin = new Random().Next(0, 2);
             if (spin == 0)
             {
                 CoinCaraImg.IsVisible = true;
                 CoinCoroaImg.IsVisible = false;
                 points += 1;
-                //maxscore = points;
+                if (points != 0 && points > maxscore)                   
+                    maxscore = points;
+                TextCaraLabel.Text = "Cara";
             }
             else
             {
                 CoinCoroaImg.IsVisible = true;
                 CoinCaraImg.IsVisible = false;
                 points = 0;
+                TextCaraLabel.Text = "Coroa";
             }
-            ScoreLabel.Text = points.ToString();        
-            //MaxScoreLabel.Text = maxscore.ToString();
+            ScoreLabel.Text = points.ToString();
+            MaxScoreLabel.Text = maxscore.ToString();
         }
 
         private void CoroaButton_Clicked(object sender, EventArgs e)
@@ -40,16 +43,19 @@
                 CoinCoroaImg.IsVisible = true;
                 CoinCaraImg.IsVisible = false;
                 points += 1;
-                //maxscore = points;
+                if (points != 0 && points > maxscore)
+                    maxscore = points;
+                TextCaraLabel.Text = "Coroa";
             }
             else
             {
                 CoinCaraImg.IsVisible = true;
                 CoinCoroaImg.IsVisible = false;
                 points = 0;
+                TextCaraLabel.Text = "Cara";
             }
             ScoreLabel.Text = points.ToString();            
-            //MaxScoreLabel.Text = maxscore.ToString();
+            MaxScoreLabel.Text = maxscore.ToString();
         }        
     }
 
