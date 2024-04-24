@@ -20,10 +20,6 @@
                 HeightRequest="200"
                 IsVisible="False"/>
 
-            <Label 
-                x:Name="TextCaraLabel"
-                Text=" "/>
-
             <Image
                 x:Name="CoinCoroaImg"
                 Source="coin_coroa_image.jpg"
@@ -32,8 +28,9 @@
                 IsVisible="False"/>
 
             <Label 
-                x:Name="TextCoroaLabel"
-                Text=" "/>
+                x:Name="ResultLabel"
+                Text=" "
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="CaraButton"
@@ -47,17 +44,23 @@
                 Background="#404040"
                 Clicked="CoroaButton_Clicked"/>
 
-            <Label Text="Pontuação: "/>
+            <Label 
+                Text="Pontuação: "
+                HorizontalOptions="Center"/>
                 
             <Label
                 x:Name="ScoreLabel"
-                Text=" "/>
+                Text=" "
+                HorizontalOptions="Center"/>
 
-            <Label Text="Pontuação Maxima: "/>
+            <Label 
+                Text="Pontuação Maxima: "
+                HorizontalOptions="Center"/>
             
             <Label
                 x:Name="MaxScoreLabel"
-                Text=" "/>
+                Text=" "
+                HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
     </ScrollView>

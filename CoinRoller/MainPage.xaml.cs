@@ -21,14 +21,14 @@
                 points += 1;
                 if (points != 0 && points > maxscore)                   
                     maxscore = points;
-                TextCaraLabel.Text = "Cara";
+                ResultLabel.Text = "Cara";
             }
             else
             {
                 CoinCoroaImg.IsVisible = true;
                 CoinCaraImg.IsVisible = false;
                 points = 0;
-                TextCaraLabel.Text = "Coroa";
+                ResultLabel.Text = "Coroa";
             }
             ScoreLabel.Text = points.ToString();
             MaxScoreLabel.Text = maxscore.ToString();
@@ -45,14 +45,14 @@
                 points += 1;
                 if (points != 0 && points > maxscore)
                     maxscore = points;
-                TextCaraLabel.Text = "Coroa";
+                ResultLabel.Text = "Coroa";
             }
             else
             {
                 CoinCaraImg.IsVisible = true;
                 CoinCoroaImg.IsVisible = false;
                 points = 0;
-                TextCaraLabel.Text = "Cara";
+                ResultLabel.Text = "Cara";
             }
             ScoreLabel.Text = points.ToString();            
             MaxScoreLabel.Text = maxscore.ToString();
